@@ -1,0 +1,22 @@
+body {
+    background: turquoise;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+.assignment{
+ display:flex;  
+ padding:10px; 
+ background:lightgray;
+ margin:10px;
+}
+
+.assignment img {
+    width:200px;
+    padding:10px;
+}
+
+h1{
+    color: darkviolet;
+    text-align: center;
+}
