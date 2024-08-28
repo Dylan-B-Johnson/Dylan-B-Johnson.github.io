@@ -1,0 +1,43 @@
+/* Color Scheme:
+* https://maketintsandshades.com/#7790A6,B8CAD9,43736A,2D4010,567319 */
+body {
+	background: #ecf1f0;
+	font-family: Verdana, Arial, sans-sarif;
+}
+
+#main-div {
+	/* centers the div */
+	max-width: fit-content;
+	margin: auto;
+}
+
+p {
+	color: #365c55; 
+}
+
+#title-header {
+	color: #3c4853;
+	text-aligh: center;
+}
+
+#assignments-header {
+	color: #567319;
+}
+
+#main-nav li {
+	/* removes bullets */
+	list-style-type: none;
+	padding: 4px;
+}
+
+#main-nav a {
+	/* no link underline */
+	text-decoration: none;
+	background: #7790a6; 
+	color: #FFFFFF; 
+}
+
+#main-nav a:hover {
+	color: #7790a6;
+	background: black;
+}
