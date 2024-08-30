@@ -2,14 +2,21 @@
 /* Structure */
 /* https://maketintsandshades.com/#7790A6,B8CAD9,43736A,2D4010,567319 */
 body {
-	background: #ecf1f0;
+	background: #678130;
 	font-family: Verdana, Arial, sans-sarif;
 }
 
 #main-div {
 	/* centers the div */
-	max-width: fit-content;
+	background: #ecf1f0;
 	margin: auto;
+	border-radius: 10px;
+    width: 50%;
+    margin: 15px auto;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 80px;
+	padding-top: 20px;
 }
 
 p {
