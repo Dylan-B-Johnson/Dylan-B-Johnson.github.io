@@ -1,5 +1,6 @@
 /* Color Scheme:
-* https://maketintsandshades.com/#7790A6,B8CAD9,43736A,2D4010,567319 */
+/* Structure */
+/* https://maketintsandshades.com/#7790A6,B8CAD9,43736A,2D4010,567319 */
 body {
 	background: #ecf1f0;
 	font-family: Verdana, Arial, sans-sarif;
@@ -17,7 +18,7 @@ p {
 
 #title-header {
 	color: #3c4853;
-	text-aligh: center;
+	text-align: center;
 }
 
 #assignments-header {
