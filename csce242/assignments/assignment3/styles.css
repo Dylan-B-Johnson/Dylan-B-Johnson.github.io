@@ -1,0 +1,174 @@
+/* Dylan Johnson Assignment 3 for CSCE 242 */
+/* Structure */
+body {
+    background-color: #f1f2e9;
+    width: 98%;
+    margin: auto;
+	font-family: Arial, sans-serif;
+}
+
+#main-header {
+    background-color: #f2f0d5;
+    margin-top: 5px;
+    border: 1px solid #a4bfb8;
+}
+
+#main-header h1 {
+    text-align: center;
+}
+
+#main-nav li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#main-content {
+    background-color: #a4bfb8;
+    border: 1px solid #a4bfb8;
+} 
+
+#main-content h1 {
+    text-align: center;
+}
+
+#main-content p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#main-aside {
+    background-color: #d98282;
+}
+
+#main-aside h1 {
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+#main-aside ul {
+    padding-bottom: 20px;
+}
+
+#main-aside li {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#main-aside a {
+    text-decoration: none;
+}
+
+#main-footer {
+    background-color: #f2f0d5;
+    border: 1px solid #a4bfb8;
+    margin-bottom: 5px;
+}
+
+#main-footer-content {
+    width: 80%;
+    margin: auto;
+}
+
+#main-footer-content img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#main-footer-content h1 {
+    padding-left: 10px;
+}
+
+#main-footer-content p {
+    padding-left: 10px;
+}
+
+img {
+    max-width:100%;
+    display: block;
+    margin: auto;
+}
+
+/* Navigation */
+#main-nav ul {
+    background-color: #d98282;
+    padding-left: 0px;
+}
+
+#main-nav li {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    border: 1px solid #a4bfb8;
+    width: auto;
+}
+
+#main-nav a {
+    text-decoration: none;
+    display:block;
+}
+
+/* Typography */
+#main-header h1 {
+    color: #5d878c;
+}
+
+#main-nav a {
+    color: #fff;
+}
+
+#main-content h1 {
+    color: #fff;
+}
+
+#main-content p {
+    color: #fff;
+}
+
+#main-aside a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#main-footer h1 {
+    color: #5d878c;
+}
+
+#main-footer p {
+    color: #5d878c;
+}
+
+#copyright {
+    text-align: center;
+}
+
+/* Apply to 600px and larger */
+@media only screen and (min-width:600px) {
+   .columns {
+        display: flex;
+   }     
+   
+   .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
+
+    .five {
+        flex:5;
+    }
+
+    .nine {
+        flex: 9;
+    }
+}
