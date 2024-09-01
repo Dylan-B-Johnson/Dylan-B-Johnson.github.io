@@ -5,16 +5,43 @@
 		<title>Dylan's CSCE242 Course Website</title>
 	</head>
 	<body>
-		<div id="main-div">
-			<h1 id="title-header">Dylan's CSCE 242 Course Website</h1>
-			<p>CSCE 242 is a class on web development. We will use HTML, CSS, JavaScript, Node.js, express, and mongoDB. </p>
-			<h2 id="assignments-header">Assignments</h2>
-			<nav id="main-nav">
-				<ol id>
-					<li><a href=./assignments/assignment1/index.html>Basic HTML</a></li>
-					<li><a href=./assignments/assignment2/index.html>Basic CSS</a></li>
-				</ol>
-			</nav>
+		<div id="content">
+			<header id="main-header" class="wrapper">
+				<h1 id="title-header">CSCE 242: Client-Server Computing</h1>
+				<h4 id="name">Dylan Johnson</h4>
+			</header>
+			<div id="main-content">
+				<h2 id="assignments-header">Assignments</h2>
+				<nav id="main-nav" class="columns">
+					<!-- Empty div for spacing until more assignment are added -->
+					<div class="one"></div>
+					<section class="one">
+						<a href="./assignments/assignment1/index.html">
+							<h3 class="assignment-header">Assignment 1: Basic HTML</h3>
+							<img src="./images/assignment1.PNG">
+							<p>Demonstrates basic usage of a HTML including divs, paragraphs, headers, images, hyperlinks, and tables.</p>
+						</a> 
+					</section>
+					<section class="one">
+						<a href=./assignments/assignment2/index.html>
+							<h3 class="assignment-header">Assignment 2: Basic CSS</h3>
+							<img src="./images/assignment2.PNG">
+							<p>Demonstrates basic usage of CSS, including padding, margin, coloring, and borders. </p>
+						</a>
+					</section>
+					<section class="one">
+						<a href=./assignments/assignment2/index.html>
+							<h3 class="assignment-header">Assignment 3: Page Layout</h3>
+							<img src="./images/assignment3.PNG">
+							<p>Demonstrates the usage of flex-boxes and media queries to make a layout that looks good on mobile and desktop</p>
+						</a>
+					</section>
+					<!-- Empty div for spacing until more assignment are added -->
+					<div class="one"></div>
+				</nav>
+			</div>
+			<footer id="main-footer">
+			</footer>
 		</div>
 	</body>	
 </html>
