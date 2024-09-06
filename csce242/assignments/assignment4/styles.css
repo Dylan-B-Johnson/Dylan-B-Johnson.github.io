@@ -1,0 +1,139 @@
+/* Dylan Johnson Assignment 4 for CSCE 242 */
+
+/* Colors */
+:root {
+    --header-background:black;
+    --bright-text: white;
+    --gap-background: #4f4f4f;
+    --hover-color: #b43946;
+    --mobile-top-heading-margin: 5px;
+    --mobile-side-heading-margin: 10px;
+    --mobile-serach-right: 62px;
+    --mobile-header-heights: 52px;
+}
+
+
+/* Structure */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: "Berlingske Sans", "Arial", sans-serif;    
+    background-color: var(--gap-background);
+}
+
+#main-header {
+    width: 100%;
+    position: relative;  
+    top: var(--mobile-header-heights);
+    margin: 0px;
+}
+
+#fixed-bar {
+    background-color: var(--header-background);
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: var(--mobile-header-heights);
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+}
+
+#mobile-search {
+    position: absolute;
+    top: var(--mobile-top-heading-margin);
+    right: var(--mobile-side-heading-margin);
+}
+
+#mobile-hamburger {
+    position: absolute;
+    top: var(--mobile-top-heading-margin);
+    right: var(--mobile-serach-right);
+}
+
+#mobile-logo {
+    position: relative;
+    top: var(--mobile-top-heading-margin);
+    left: var(--mobile-side-heading-margin);
+}
+
+#mobile-main-nav {
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#mobile-main-nav ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+#mobile-main-nav li {
+    padding-left: 0px;
+    margin-top: 1px;
+    height: var(--mobile-header-heights);
+    background-color: var(--header-background);
+    width: 100%;
+    display: table;
+}
+
+#mobile-main-nav a {
+    text-decoration: none;
+    padding-left: 10px;
+    vertical-align: middle; 
+    display: table-cell;
+}
+
+#mobile-main-nav a:hover {
+    background-color: var(--hover-color);
+}
+
+img {
+    max-width:100%;
+}
+
+/* Navigation */
+
+
+/* Typography */
+#mobile-main-nav a {
+    color: var(--bright-text);
+    font-weight: 800;
+}
+
+/* Apply to 600px and larger */
+@media only screen and (min-width:600px) {
+   .columns {
+        display: flex;
+   }     
+
+   .mobile {
+        display: none;
+   }
+   
+   .one {
+        flex:1;
+    }
+
+    .two {
+        flex:2;
+    }
+
+    .three {
+        flex:3;
+    }
+
+    .four {
+        flex:4;
+    }
+
+    .five {
+        flex:5;
+    }
+
+    .nine {
+        flex: 9;
+    }
+}
