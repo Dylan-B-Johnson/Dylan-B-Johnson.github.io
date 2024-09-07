@@ -3,15 +3,21 @@
 /* Colors */
 :root {
     --header-background:black;
+    --darker-text: #222222;
     --bright-text: white;
     --gap-background: #4f4f4f;
+    --educational-investment-background: #ececec;
     --hover-color: #b43946;
+    --hover-background: #F0F0F0;
+    --hover-shadow: rgb(0, 0, 0, 15%);
+    --dark-text: #73000a;
     --mobile-top-heading-margin: 5px;
     --mobile-side-heading-margin: 10px;
     --mobile-serach-right: 62px;
     --mobile-header-heights: 52px;
+    --graf-left-padding: 15px;
+    --second-indent: 30px;
 }
-
 
 /* Structure */
 body {
@@ -19,15 +25,13 @@ body {
     padding: 0px;
     font-size: 1em;
     line-height: 1.4;
-    font-family: "Berlingske Sans", "Arial", sans-serif;    
+    /* Arial is the recommended substitute for Berlingske Sans (what USC uses) */
+    font-family: "Arial", sans-serif;    
     background-color: var(--gap-background);
 }
 
-#main-header {
-    width: 100%;
-    position: relative;  
-    top: var(--mobile-header-heights);
-    margin: 0px;
+#main-content {
+    background-color: var(--bright-text);
 }
 
 #fixed-bar {
@@ -59,6 +63,303 @@ body {
     left: var(--mobile-side-heading-margin);
 }
 
+img {
+    max-width:100%;
+}
+
+.fit-width {
+    width: 100%;
+    object-fit:fill;
+}
+
+#main-header {
+    width: 100%;
+    position: relative;  
+    top: var(--mobile-header-heights);
+    margin: 0px;
+}
+
+#expand {
+    font-weight: 700;    
+    font-size: 21px;
+    line-height: 1.8em;
+    padding-left: var(--graf-left-padding);
+    padding-right: var(--graf-left-padding);
+}
+
+#grad-school-header {
+    font-size: 41.5px;
+    letter-spacing: 1.6px;
+    margin: 1rem 0 0 0;
+    padding-left: var(--graf-left-padding);
+    padding-right: var(--graf-left-padding);
+    font-family: "Impact", sans-serif;
+}
+
+#degree-programs {
+    padding-bottom: 34px;
+    margin-bottom: -29px;
+}
+
+#second-big-image {
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-top: 25px;
+    display: inline-block;/* Makes it so top margin appears  */
+}
+
+#degree-programs img {
+    object-fit: contain;
+}
+
+.main-indent {
+    padding-left: var(--graf-left-padding);
+    padding-right: var(--graf-left-padding);
+}
+
+.garnet-background {
+    background-color: var(--dark-text);
+}
+
+#explore {
+    padding-left: var(--second-indent);
+    padding-right: var(--second-indent);
+}
+
+#degree-program-graph {
+    padding-left: var(--second-indent);
+    padding-right: var(--second-indent);
+}
+
+#app-requirements {
+    background-color: var(--header-background);
+    width: 275px;
+    margin-left: var(--second-indent);
+    height: 56px;
+    border: solid var(--bright-text);
+    border-width: 2px;    
+}
+
+#app-requirements a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    vertical-align: middle;
+    display: table;
+}
+
+.button-div {
+    border: solid var(--bright-text);
+}
+
+.button-a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    vertical-align: middle;
+    display: table;
+}
+
+.button-h2 {
+    font-size: 20px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#app-requirements h2 {
+    font-size: 20px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#app-requirements:hover h2 {
+    background-color: var(--bright-text);
+    color: var(--dark-text);
+}
+
+#educational-investment {
+    background-color: var(--educational-investment-background);
+    margin-top: 0px;
+}
+
+#educational-investment h1 {
+    text-align: center;    
+    padding-top: 60px;
+}
+
+#educational-investment {
+    text-align: center;    
+    padding-left: var(--second-indent);
+    padding-right: var(--second-indent);
+    padding-bottom: 27px;
+}
+
+#tuition {
+    background-color: var(--dark-text);
+    height: 56px;
+    width: 186px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+#tuition:hover h2 {
+    background-color: var(--bright-text);
+    color: var(--dark-text);
+    border: solid var(--dark-text);
+}
+
+#paying-for-school {
+    background-color: var(--bright-text);
+}
+
+
+#paying-first-graf {
+    text-align: center;
+    padding-left: var(--second-indent);
+    padding-right: var(--second-indent);
+}
+
+.paying-section {
+    text-decoration: none;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-top: 35px;
+    display: inline-block;
+}
+
+.paying-section img {
+    height: auto;
+    width: 100%;
+    object-fit:contain;
+}
+
+.paying-section h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-decoration: none;
+    padding-left: var(--second-indent);
+    padding-right: var(--second-indent);
+}
+
+.paying-section p {
+    text-decoration: none;
+    padding-left: var(--second-indent);
+    padding-right: var(--second-indent);
+}
+
+.paying-section:hover {
+    box-shadow: 2px 2px 3px 3px var(--hover-shadow);
+    background-color: var(--hover-background);
+}
+
+#last-content-section {
+    background-color: var(--header-background);
+    padding-left: var(--second-indent);
+    padding-right: var(--second-indent);
+    padding-bottom: 30px;
+}
+
+#last-content-section img {
+    padding-top: 20px;
+    /* allows you to center with the margin-left/right: auto */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#last-content-section p {
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#apply-now {
+    height: 50px;
+    width: 144px;
+    background-color: var(--dark-text);
+}
+
+#apply-now a {
+    width: 100%;
+    height: 100%;
+}
+
+#apply-now h2 {
+    text-align: center; 
+    margin: 0px;
+    width: 100%;
+}
+
+#apply-now:hover {
+    border: solid var(--dark-text);
+}
+
+#apply-now:hover a {
+    background-color: var(--bright-text);
+}
+
+#main-footer-content {
+    background-color: var(--dark-text);
+}
+
+#usc-logo-footer {
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#socials {
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+#socials a {
+    margin: 10px;
+}
+
+#socials img {
+    flex: 1;
+}
+
+.columns-all {
+    display: flex;
+}
+
+.footer-section {
+    padding-left: var(--graf-left-padding);
+    padding-right: var(--graf-left-padding);
+}
+
+.footer-section h3 {
+    margin-bottom: -1px;    
+}
+
+.footer-section hr {
+    color: var(--bright-text);
+    height: 0px;
+}
+
+.footer-section a {
+    text-decoration: none;
+}
+
+.footer-section p {
+    width: 100%;
+}
+
+/* Navigation */
 #mobile-main-nav {
     margin-left: 0px;
     margin-top: 0px;
@@ -86,21 +387,153 @@ body {
     display: table-cell;
 }
 
-#mobile-main-nav a:hover {
+.link {
+    display: inline;
+    vertical-align: middle;
+}
+
+/* triggers on a:hover but applies to .link */
+#mobile-main-nav a:hover .link {
     background-color: var(--hover-color);
 }
-
-img {
-    max-width:100%;
-}
-
-/* Navigation */
-
 
 /* Typography */
 #mobile-main-nav a {
     color: var(--bright-text);
     font-weight: 800;
+}
+
+#grad-school-header {
+    color: var(--dark-text);
+    font-weight: 800;
+}
+
+#expand {
+    color: var(--darker-text);
+}
+
+#first-graph {
+    color: var(--darker-text);
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+#explore {
+    font-weight: 800;
+    color: var(--bright-text);
+    font-size: 28px; 
+}
+
+#degree-program-graph { 
+    color: var(--bright-text);
+    font-weight: 500;
+    line-height: 1.8em;
+}
+
+#app-requirements h2 {
+    font-weight: 800;
+    font-family: "Impact", sans-serif;
+    color: var(--bright-text);
+}
+
+#educational-investment h1 {
+    font-family: "Impact", sans-serif;
+    font-size: 40px;
+}
+
+#educational-investment p {
+    line-height: 2;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--darker-text);
+}
+
+.garnet {
+    color: var(--dark-text);
+}
+
+#tuition h2 {
+    color: var(--bright-text);
+    font-weight: 800;
+    font-family: "Impact", sans-serif;
+}
+
+#paying-for-school h2 {
+    color: var(--dark-text);
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.25em;
+    font-family: "Georgia", serif;
+    font-size: 42px;
+} 
+
+#paying-first-graf {
+    color: var(--darker-text);
+    line-height: 2;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.garnet {
+    color: var(--dark-text);
+}
+
+#tuition h2 {
+    color: var(--bright-text);
+    font-weight: 800;
+    font-family: "Impact", sans-serif;
+}
+
+.paying-section h3 {
+    font-weight: 800;
+    color: var(--dark-text);
+    line-height: 1.4em;
+    font-size: 19px;
+}
+
+.paying-section p {
+    color: var(--header-background);
+    line-height: 1.6em;
+}
+
+#next-step {
+    color: var(--bright-text);
+    font-size: 28px;
+}
+
+#apply-now h2 {
+    color: var(--bright-text);
+    font-size: 18px;
+    font-family: "Impact", sans-serif;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+}
+
+#last-content-section p {
+    color: var(--bright-text);
+    line-height: 2;
+    font-weight: 500;
+}
+
+#apply-now:hover h2 {
+    color: var(--dark-text);
+}
+
+.footer-section h3 {
+    color: var(--bright-text);
+    font-family: "Impact", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+}
+
+.footer-section a {
+
+}
+
+.footer-section p {
+    color: var(--bright-text);
+    font-size: 12px;
 }
 
 /* Apply to 600px and larger */
