@@ -9,12 +9,11 @@ body {
 
 #content {
 	background: #ecf1f0;
-	margin: auto;
 	border-radius: 10px;
-    width: 80%;
-    margin: 15px auto;
-	padding-left: 80px;
-	padding-right: 80px;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding-left: 40px;
+	padding-right: 40px;
 	padding-bottom: 80px;
 	padding-top: 20px;
 }
@@ -28,22 +27,32 @@ img {
 	margin: auto;
 }
 
-#assignments-header {
+h2 {
 	text-align: center;
 }
 
 /* Navigation */
-#main-nav section {
+nav section {
+	display: block;
 	background: #cddae4;
 	margin: 10px;
 	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+	width: 369px;
+	height: 375px;
 }
 
-#main-nav a {
+nav section img {
+	width: 241px;
+	height: 150px;
+}
+
+nav a {
 	text-decoration: none;
 }
 
-#main-nav p {
+nav p {
 	padding-left:  20px; 
 	padding-right: 20px; 
 	padding-bottom: 10px; 
@@ -51,7 +60,7 @@ img {
 }
 
 /* Typography */
-#assignments-header {
+h2 {
 	color: #567319;
 }
 
@@ -71,14 +80,23 @@ img {
 	color: #365c55; 
 }
 
-#main-nav p {
+nav p {
 	color: #365c55; 
 }
 
 /* Apply to 600px and larger */
 @media only screen and (min-width:600px) {
+	#content {
+		width: 80%;
+		margin: 15px auto;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+
 	.columns {
         display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}     
 
 	.one {
