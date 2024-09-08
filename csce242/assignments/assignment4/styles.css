@@ -411,6 +411,10 @@ img {
     border-width: 1px;    
 }
 
+.relative {
+    position: relative;
+}
+
 /* Navigation */
 #mobile-main-nav {
     margin-left: 0px;
@@ -579,10 +583,6 @@ img {
     letter-spacing: 1.2px;
 }
 
-.footer-section a {
-
-}
-
 .footer-section p {
     color: var(--bright-text);
     font-size: 12px;
@@ -591,6 +591,11 @@ img {
 #footers-footer p {
     color: var(--bright-text);
     font-size: 12px;
+    font-weight: 500;
+}
+
+.desktop {
+    display: none;
 }
 
 /* Apply to 600px and larger */
@@ -601,6 +606,11 @@ img {
 
    .mobile {
         display: none;
+   }
+
+   .desktop {
+        /* basically (though not quite) the opposite of diplay: none */
+        display: unset;
    }
    
    .one {
@@ -625,5 +635,58 @@ img {
 
     .nine {
         flex: 9;
+    }
+
+    #footers-footer section {
+        margin-left: 0px;
+    }
+
+    #main-footer-content {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-section {
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+
+    #red-footer-desktop {
+        display: flex;
+        justify-content: center; 
+    }
+
+    .red-footer-small-col {
+        margin-right: 30px;
+    }    
+
+    #footers-footer {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    #usc-logo-desktop {
+        width: 1315px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #usc-logo-footer-desktop {
+        position: relative;
+        left: 0px;
+        top: 33px;
+    }
+        
+    #socials-desktop {
+        position: relative;
+        left: 1206px;   
+        width: fit-content;
+        top: -33px;
+    }
+
+    #socials-desktop a {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
