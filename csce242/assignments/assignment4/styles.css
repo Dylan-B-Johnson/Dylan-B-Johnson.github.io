@@ -1,19 +1,21 @@
 /* Dylan Johnson Assignment 4 for CSCE 242 */
 
-/* Colors */
 :root {
+	/* Colors */
 	--header-background: black;
 	--darker-text: #222222;
 	--bright-text: white;
 	--gap-background: #4f4f4f;
 	--educational-investment-background: #ececec;
+	--hover-top-second: #570008;
 	--hover-color: #b43946;
 	--hover-background: #F0F0F0;
 	--hover-shadow: rgb(0, 0, 0, 15%);
 	--dark-text: #73000a;
+	/* sizes */
 	--mobile-top-heading-margin: 5px;
-	--mobile-side-heading-margin: 10px;
-	--mobile-serach-right: 62px;
+	--mobile-side-heading-margin: 30px;
+	--mobile-serach-right: 82px;
 	--mobile-header-heights: 52px;
 	--graf-left-padding: 15px;
 	--second-indent: 30px;
@@ -81,6 +83,7 @@ img {
 
 #expand {
 	font-weight: 700;
+	margin-top: 10px;
 	font-size: 21px;
 	line-height: 1.8em;
 	padding-left: var(--graf-left-padding);
@@ -199,6 +202,7 @@ img {
 }
 
 #educational-investment {
+	margin-top: -45px;
 	text-align: center;
 	padding-left: var(--second-indent);
 	padding-right: var(--second-indent);
@@ -598,6 +602,10 @@ img {
 	display: none;
 }
 
+.desktop-two {
+	display: none;
+}
+
 /* Apply to 600px and larger */
 @media only screen and (min-width:600px) {
 	.columns {
@@ -647,6 +655,155 @@ img {
 		flex: 9;
 	}
 
+	#pad-desktop {
+		display: block;
+		margin-left: auto;
+		margin-righ: auto;
+	}
+
+	#desktop-search-div {
+		width: 100%;
+	}
+
+	#desktop-search {
+		position: relative;
+		top: 46px;
+		float: right;
+		height: 36px;
+		width: 277px;
+	}
+
+	#desktop-search img {
+		height: 36px;
+		width: 277px;
+	}
+
+	#desktop-logo {
+		position: relative;
+		top: 35px;
+	}
+
+	#desktop-logo img {
+		height: 60px;
+		width: 310px;
+	}
+
+	#fixed-bar {
+		height: 116px;
+		/* makes it so this goes above lower z-index (e.g. relative grad-school-header) */
+		z-index: 3;
+	}
+
+	#desktop-main-nav {
+		background-color: var(--dark-text);
+		z-index: 2;
+		position: relative;
+		display: inline-block;
+		height: 48px;
+		top: 61px;
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+
+	#desktop-main-nav ul {
+		height: 100%;
+		text-align: center;
+		padding: 0px;
+		margin: 0px;
+		list-style: none;
+	}
+
+	#desktop-main-nav div {
+		height: 100%;
+		margin-left: 10px;
+		display: inline-block;
+		margin-right: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#desktop-main-nav li {
+		margin-top: 9.6px;	
+		margin-bottom: 9.6px;	
+		display: table;
+	}
+
+	#desktop-main-nav div:hover {
+		background-color: var(--hover-top-second);
+	}
+
+	/* triggers on a:hover but applies to .link */
+	#desktop-main-nav div:hover .link {
+		background-color: var(--hover-color);
+	}
+
+	#desktop-main-nav a {
+		margin-bottom: auto;
+		height: 100%;
+		margin-top: auto;
+		font-size: 20px;
+		text-decoration: none;
+		color: var(--bright-text);
+		font-weight: 800;
+		vertical-align: middle;
+		display:table-cell;
+	}
+
+	#desktop-main-nav p {
+		text-transform: uppercase;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	#top-image {
+		height: 666px;
+	}
+
+	#pad-relative {
+		position: relative;
+	}
+
+	#grad-school-header {
+		font-size: 76px;
+		color: var(--bright-text);
+		background-color: var(--dark-text);
+		position: relative;
+		z-index: 1;
+		top: -60px;
+		width: fit-content;
+	}
+		
+	#grad-school-first-graph-div {
+		padding-left: 30%;
+		padding-right: 30%;
+	}
+
+	#grad-school-first-graph-div h2 {
+		font-size: 21px;
+	}
+
+	#grad-school-first-graph-div p {
+		margin-bottom: 83px;
+	}
+
+	#tuition {
+		height: 66px;
+		width: 258px;
+	}
+
+	#tuition h2 {
+		font-size: 31px;
+	}
+
+	#educational-investment h1 {
+		font-size: 65px;
+	}
+
+	#educational-investment p {
+		font-size: 16px;
+	}
+
 	#paying-for-school h2 {
 		font-size: 62px;
 	}
@@ -659,12 +816,10 @@ img {
 	}
 
 	.paying-section {
-		/*width: 269px;
-	   	height: 498px;*/
-		flex: 1 1 0px;
-		align-self: stretch;
-		margin-bottom: 45px;
-		flex-wrap: flex;
+		width: 395px;
+	   	height: 583px;
+		margin-bottom: 20px;
+		justify-content: center;
 	}
 
 	#footers-footer section {
@@ -762,11 +917,13 @@ img {
 		padding-right: 10px;
 		padding-left: 10px;
 	}
-	
+
 	#paying-div-big {
 		display: none;
 	}
 }
+
+
 
 @media only screen and (min-width:1110px) {
 	.mobile {
@@ -777,7 +934,7 @@ img {
 		/* basically (though not quite) the opposite of diplay: none */
 		display: unset;
 	}
-	
+
 	#paying-div {
 		display: none;
 	}
@@ -804,7 +961,62 @@ img {
 	}
 }
 
-/* Yes, I know this is bad but without using functions from javascript or SASS, this would be a huge
+@media only screen and (min-width:1270px) {
+	.desktop-two {
+		display: unset;
+	}
+
+	.mobile-two {
+		display: none;
+	}
+
+	#second-big-image-desktop {
+		width: 100%;
+		height: 100%;
+		margin-bottom: -35px;
+	}
+
+	#second-big-image-desktop img {
+		object-fit: contain;
+		width: 50vw;
+	}
+
+	#degree-programs {
+		vertical-align:middle;
+		display: table;
+	}
+
+	#centered {
+		vertical-align:middle;
+		display: table-cell;
+	}
+
+	#explore {
+		font-size: 39px;
+	}
+
+	#app-requirements {
+		width: 360px;
+		height: 66px;
+	}
+
+	#degree-programs p {
+		font-size: 16px;
+		padding-right: 30%;
+	}
+
+	#explore {
+		font-size: 39px;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	#degree-programs a h2 {
+		font-size: 26px;
+	}
+}
+
+/* This is to get the right padding in the sizes between fullscreen desktop and mobile. Yes, I know this is bad but without using functions from javascript or SASS, this would be a huge
 pain without massively rearranging how I did my HTML (I wrote my HTML for mobile first and 
 only later realized I should've been looking at both and planning ahead). Instead, I have thus precomputed the function I wanted up
 to a 4K screen.*/

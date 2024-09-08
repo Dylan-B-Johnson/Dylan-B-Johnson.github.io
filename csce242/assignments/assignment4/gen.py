@@ -3,7 +3,7 @@ print("")
 pdr = 14 
 pdl = 14 
 stop_width = 3840  
-width = start_width;
+width = start_width
 print(f"@media only screen and (min-width: 600px) {{")
 print(f"\t.pad {{\n\t\tpadding-right: {int(10)}px;")
 print(f"\t\tpadding-left: {int(10)}px;")

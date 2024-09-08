@@ -17,7 +17,59 @@
                 <a id="mobile-hamburger" href="#" class="mobile">
                     <img src="https://place-hold.it/42x42">
                 </a> 
+                <div id="pad-desktop" class="pad desktop">
+                    <a id="desktop-logo" href="#">
+                        <img src="https://place-hold.it/180x40">
+                    </a>
+                    <a id="desktop-search" href="#">
+                        <img src="https://place-hold.it/42x42">
+                    </a> 
+                </div>
             </div>
+            <nav id="desktop-main-nav" class="desktop">
+                <ul>
+                    <div>
+                        <li>
+                            <a href="#"><p class="link">Study</p></a>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <a href="#"><p class="link">Experience</p></a>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <a href="#"><p class="link">Visit</p></a>
+                        </li href="#">
+                    </div>
+                    <div>
+                        <li>
+                            <a href="#"><p class="link">Admissions</p></a href="#">
+                        </li>
+                    </div>
+                    <div>
+                        <li href="#">
+                            <a href="#"><p class="link">Research</p></a>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <a href="#"><p class="link">About</p></a>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <a href="#"><p class="link">News & Events</p></a>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <a href="#"><p class="link">Athletics</p></a>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
             <nav id="mobile-main-nav" class="mobile">
                 <ul>
                     <li>
@@ -48,29 +100,42 @@
             </nav>
         </header>
         <div id="main-content">
-            <img src="https://place-hold.it/600x700" class="fit-width">
-            <h1 id="grad-school-header">GRADUATE SCHOOL ADMISSIONS</h1>
-            <h2 id="expand">Expand on your undergraduate education through one of the more than 230 graduate and certificate programs at the University of South Carolina.</h2>
-            <p id="first-graph" class="main-indent">South Carolina, one of the first universities to confer the doctoral degree, established the Graduate School more than 115 years ago. Today the university is an academic home to more than 6,400 graduate students from 49 states, four U.S. territories and 83 different countries. With 56 nationally ranked graduate degree programs, we're ready to help you excel in your field of study.</p>
-            <div class="garnet-background" id="degree-programs">
-                <section id="second-big-image">
+            <img id="top-image" src="https://place-hold.it/600x700" class="fit-width">
+            <div class="pad" id="pad-relative">
+                <h1 id="grad-school-header">GRADUATE SCHOOL ADMISSIONS</h1>
+            </div>
+            <div id="grad-school-first-graph-div" class="pad">
+                <h2 id="expand">Expand on your undergraduate education through one of the more than 230 graduate and certificate programs at the University of South Carolina.</h2>
+                <p id="first-graph" class="main-indent">South Carolina, one of the first universities to confer the doctoral degree, established the Graduate School more than 115 years ago. Today the university is an academic home to more than 6,400 graduate students from 49 states, four U.S. territories and 83 different countries. With 56 nationally ranked graduate degree programs, we're ready to help you excel in your field of study.</p>
+            </div>
+            <div class="columns">
+                <section class="desktop-two one" id="second-big-image-desktop">
                     <img src="https://place-hold.it/720x500">
                 </section>
-                <h2 id="explore">Explore Degree Programs</h2>
-                <p id="degree-program-graph">Get details about specific graduate degree programs at South Carolina. Learn about areas of concentration and degree options, application requirements and deadlines, and any required documents or prerequisites that must accompany your application.</p>
-                <div id="app-requirements">
-                    <a href="#">
-                        <h2>APPLICATION REQUIREMENTS &rsaquo;&rsaquo;</h2>
-                    </a>
+                <div class="garnet-background one" id="degree-programs">
+                    <div id="centered">
+                        <section id="second-big-image" class="mobile-two">
+                            <img src="https://place-hold.it/720x500" class="mobile-two">
+                        </section>
+                        <h2 id="explore">Explore Degree Programs</h2>
+                        <p id="degree-program-graph">Get details about specific graduate degree programs at South Carolina. Learn about areas of concentration and degree options, application requirements and deadlines, and any required documents or prerequisites that must accompany your application.</p>
+                        <div id="app-requirements">
+                            <a href="#">
+                                <h2>APPLICATION REQUIREMENTS &rsaquo;&rsaquo;</h2>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="educational-investment">
-                <h1 class="garnet">Your Educational<br>Investment</h1>
-                <p>If you're considering graduate school but wonder about the cost, you can get a rough estimate of tuition and fees. Evaluate your academic investment whether you're a resident or nonresident and depending on part-time or full-time enrollment as well as learn about required university and departmental fees that might apply. </p>
-                <div id="tuition" class="button-div" class="garnet-background">
-                    <a href="#" class="button-a">
-                        <h2 class="button-h2">TUITION AND FEES &rsaquo;&rsaquo;</h2>
-                    </a>
+                <div class="pad">
+                    <h1 class="garnet">Your Educational <br class="mobile">Investment</h1>
+                    <p>If you're considering graduate school but wonder about the cost, you can get a rough estimate of tuition and fees. Evaluate your academic investment whether you're a resident or nonresident and depending on part-time or full-time enrollment as well as learn about required university and departmental fees that might apply. </p>
+                    <div id="tuition" class="button-div" class="garnet-background">
+                        <a href="#" class="button-a">
+                            <h2 class="button-h2">TUITION AND FEES &rsaquo;&rsaquo;</h2>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div id="paying-for-school">
@@ -79,26 +144,30 @@
                     <p id="paying-first-graf">There are a variety of ways to help fund graduate studies, research and scholarly travel. Students can teach, conduct research, apply for grants or scholarships, and more from a range of university and external resources.</p>
                 </div>
                 <div id="paying-div" class="columns center-columns pad">
-                    <a href="#" class="paying-section">
-                        <img src="https://place-hold.it/437x437">
-                        <h3>Assistantships &rsaquo;&rsaquo;</h3>
-                        <p>Help faculty members teach classes, conduct research or handle day-to-day administrative tasks in return for benefits including reduced tuition and stipends.</p>
-                    </a>
-                    <a href="#" class="paying-section">
-                        <img src="https://place-hold.it/437x437">
-                        <h3>Scholarships and Financial Aid &rsaquo;&rsaquo;</h3>
-                        <p>Find and apply for grants, scholarships, loans or federal financial aid that can help make your graduate studies more affordable.</p>
-                    </a>
-                    <a href="#" class="paying-section">
-                        <img src="https://place-hold.it/437x437">
-                        <h3>Fellowships and Awards &rsaquo;&rsaquo;</h3>
-                        <p>Access a wide range of merit-based financial awards and fellowships through the Graduate School, the university and from various national organizations.</p>
-                    </a>
-                    <a href="#" class="paying-section">
-                        <img src="https://place-hold.it/437x437">
-                        <h3>Travel Grants &rsaquo;&rsaquo;</h3>
-                        <p>Meet eligibility requirements to receive grants for international or domestic travel from your department, the university or national fellowships.</p>
-                    </a>
+                    <div>
+                        <a href="#" class="paying-section">
+                            <img src="https://place-hold.it/437x437">
+                            <h3>Assistantships &rsaquo;&rsaquo;</h3>
+                            <p>Help faculty members teach classes, conduct research or handle day-to-day administrative tasks in return for benefits including reduced tuition and stipends.</p>
+                        </a>
+                        <a href="#" class="paying-section">
+                            <img src="https://place-hold.it/437x437">
+                            <h3>Scholarships and Financial Aid &rsaquo;&rsaquo;</h3>
+                            <p>Find and apply for grants, scholarships, loans or federal financial aid that can help make your graduate studies more affordable.</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="paying-section">
+                            <img src="https://place-hold.it/437x437">
+                            <h3>Fellowships and Awards &rsaquo;&rsaquo;</h3>
+                            <p>Access a wide range of merit-based financial awards and fellowships through the Graduate School, the university and from various national organizations.</p>
+                        </a>
+                        <a href="#" class="paying-section">
+                            <img src="https://place-hold.it/437x437">
+                            <h3>Travel Grants &rsaquo;&rsaquo;</h3>
+                            <p>Meet eligibility requirements to receive grants for international or domestic travel from your department, the university or national fellowships.</p>
+                        </a>
+                    </div>
                 </div>
                 <div id="paying-div-big" class="columns center-columns pad">
                     <a href="#" class="paying-section">
