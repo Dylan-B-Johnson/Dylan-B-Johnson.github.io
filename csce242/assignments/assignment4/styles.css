@@ -364,9 +364,13 @@ img {
 	width: 100%;
 }
 
+.footer-section a:hover {
+	background-color: var(--hover-color);
+}
+
 /* triggers on a:hover but applies to .link */
 .footer-section a:hover .link {
-	background-color: var(--hover-color);
+	color: var(--hover-color);
 }
 
 #main-footer {
@@ -458,6 +462,10 @@ img {
 }
 
 /* Typography */
+.bold {
+	font-weight: bold;
+}
+
 #mobile-main-nav a {
 	color: var(--bright-text);
 	font-weight: 800;
@@ -658,7 +666,7 @@ img {
 	#pad-desktop {
 		display: block;
 		margin-left: auto;
-		margin-righ: auto;
+		margin-right: auto;
 	}
 
 	#desktop-search-div {
@@ -692,6 +700,49 @@ img {
 		height: 116px;
 		/* makes it so this goes above lower z-index (e.g. relative grad-school-header) */
 		z-index: 3;
+	}
+
+	#div-outer-top {
+		position: relative;
+		top: -64px;
+	}
+
+	#fixed-bar section {
+		float: right;
+	}
+
+	#fixed-bar section p {
+		font-size: 10px;
+		color: var(--bright-text);
+		text-transform: uppercase;
+	}
+
+	#fixed-bar section div {
+		display: inline-block;
+	}
+
+	#fixed-bar section a {
+		text-decoration: none;
+		height: fit-content;
+	}
+
+	#calender {
+		margin-left: 15px;
+	}
+
+	.left-fixed-section-a {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	#gateways {
+		position: relative;
+		bottom: 1px;
+	}
+
+	/* triggers on a:hover but applies to .link */
+	#fixed-bar section a:hover .link {
+		background-color: var(--hover-color);
 	}
 
 	#desktop-main-nav {
