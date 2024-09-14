@@ -1,0 +1,322 @@
+/* Dylan Johnson CSCE242 Project Part 3 */
+
+:root {
+	/* Colors */
+    --primary-color: black;
+    --secondary-color: #cacaca;
+    --tertiary-color: white;
+    --butiary-color: #647077;
+    --pentiary-color: #686868;
+    --septiary-color: #a4adb3;
+    /* Other vals*/
+    --title-left-padding: 20px;
+    --top-header-height: 200px;
+    --all-content-width: 60vw;
+}
+
+/* Main typography */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    color: var(--primary-color);
+}
+
+/* Structure */
+body {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#all-content {
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#main-header {
+    padding-left: calc((100vw - var(--all-content-width)) / 2.0);
+    padding-right: calc((100vw - var(--all-content-width)) / 2.0);
+    z-index: 3;
+    width: var(--all-content-width);
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    height: var(--top-header-height);
+    background-color: var(--tertiary-color);
+}
+
+#header-child {
+    width: 100%;
+}
+
+#main-content {
+}
+
+#main-img {
+    max-width: 70px;
+    width: 70px;
+    height: 70px;
+}
+
+#main-title-a {
+    text-decoration: none;
+    top: -110px; 
+}
+
+#main-title {
+    margin-left: var(--title-left-padding);
+    font-size: 72px;
+    text-decoration: none;
+}
+
+#login-div {
+    margin-right: 0px;
+    margin-left: auto;
+    max-width: 100%;
+    width: fit-content;
+}
+
+#login-div div {
+    width: fit-content;
+}
+
+#login-div p {
+    width: fit-content;
+}
+
+#login-div a {
+    width: fit-content;
+}
+
+#person-icon {
+    height: 15px;
+}
+
+#logout {
+    top: -30px;
+    left: 17px;
+}
+
+#download-cv {
+    background-color: var(--septiary-color);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+#download-cv a {
+    text-decoration: none;
+}
+
+#download-cv h3 {
+    padding: 5px;
+    color: var(--tertiary-color)
+}
+
+#artist-statement p {
+    margin-top: 70px;
+}
+
+#about-art {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: auto;
+}
+
+/* Navigation */
+#main-nav {
+}
+
+#main-nav ul {
+}
+
+#main-nav-main-div {
+}
+
+#main-nav li {
+}
+
+#main-nav a {
+}
+
+#main-nav li:hover {
+}
+
+#main-nav li:hover h2 {
+}
+
+#main-nav a h2 {
+}
+
+/* Utility classes */
+.relative {
+    position: relative;
+}
+
+.contain-img {
+	object-fit: contain;
+}
+
+.right {
+    float: right;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.fill-width {
+    width: 100%;
+}
+
+.desktop {
+    display: none;
+}
+
+.center-columns-horizontal {
+    justify-content: center;
+}
+
+.center-columns {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries*/
+@media only screen and (min-width:600px) {
+    /* Structure */
+    #main-content {
+        margin-top: var(--top-header-height);
+    }
+
+    #main-img {
+        max-width: 200px;
+        width: 200px;
+        height: 200px;
+    }
+
+    #main-title-a {
+        text-decoration: none;
+        top: -110px; 
+    }
+
+    #main-title {
+        margin-left: var(--title-left-padding);
+        font-size: 72px;
+        text-decoration: none;
+    }
+
+    #all-content {
+        width: var(--all-content-width);
+    } 
+
+    /* Utility classes */
+	.columns {
+		display: flex;
+	}
+
+	.flex-wrap {
+		flex-wrap: wrap;
+	}
+	
+	/* a class that centers column classes */
+	.center-columns {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		/* basically (though not quite) the opposite of diplay: none */
+		display: unset;
+	}
+
+	.one {
+		flex: 1;
+	}
+
+	.two {
+		flex: 2;
+	}
+
+	.three {
+		flex: 3;
+	}
+
+	.four {
+		flex: 4;
+	}
+
+	.five {
+		flex: 5;
+	}
+
+	.nine {
+		flex: 9;
+	}
+
+    /* Navigation */
+    #main-nav {
+        bottom: 153.4px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+
+    #main-nav ul {
+        margin-left: var(--title-left-padding);
+        list-style-type: none;
+        width: 100%;
+        padding: 0px;
+    }
+
+    #main-nav-main-div {
+        background-color: var(--secondary-color);
+        width: 100%;
+    }
+
+    #main-nav li {
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-left: 0px;
+        margin-right: 0px;
+        display: inline-block;
+    /* border-left: 1px solid var(--tertiary-color);
+        border-right: 1px solid var(--tertiary-color); */
+    }
+
+    #main-nav a {
+        text-decoration: none;
+        display: inline-block;
+        height: 100%;
+    }
+
+    #main-nav li:hover {
+        background-color: var(--pentiary-color);
+    }
+
+    #main-nav li:hover h2 {
+        color: var(--tertiary-color);
+    }
+
+    #main-nav a h2 {
+        color: var(--butiary-color)
+    }
+}
