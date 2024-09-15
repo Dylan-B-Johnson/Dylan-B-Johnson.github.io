@@ -10,8 +10,10 @@
     --septiary-color: #a4adb3;
     /* Other vals*/
     --title-left-padding: 20px;
-    --top-header-height: 200px;
-    --all-content-width: 60vw;
+    --top-header-height: 75px;
+    --all-content-width: 98vw;
+    --top-header-padding: 10px;
+	--mobile-header-heights: 52px;
 }
 
 /* Main typography */
@@ -24,8 +26,9 @@ body {
 }
 
 /* Structure */
-body {
-    width: 100%;
+body, html{
+    margin:0;
+    padding:0;
 }
 
 img {
@@ -34,27 +37,55 @@ img {
 }
 
 #all-content {
-    margin-left: auto;
-    margin-right: auto; 
+    width: var(--all-content-width);
 }
 
 #main-header {
-    padding-left: calc((100vw - var(--all-content-width)) / 2.0);
-    padding-right: calc((100vw - var(--all-content-width)) / 2.0);
+    padding-left: 1vw;
+    padding-right: 1vw;
     z-index: 3;
     width: var(--all-content-width);
     left: 0px;
     position: fixed;
     top: 0px;
-    height: var(--top-header-height);
+    padding-top: var(--top-header-padding);
+    height: var(--top-header-height); 
     background-color: var(--tertiary-color);
 }
 
 #header-child {
     width: 100%;
+    height: 100%;
+}
+
+#login-div {
+    position: fixed;
+    width: fit-content;
+    top: var(--top-header-padding);
+    left: calc(100% - (100vw - var(--all-content-width)) / 2 - 50px);
+}
+
+#login-div-div {
+    left: -30px;
+}
+
+#logout {
+    top: -30px;
+    left: 17px;
+}
+
+#logout p {
+    position: relative;
+    left: -38px;
 }
 
 #main-content {
+    margin-top: 10px;   
+}
+
+#remaining-content {
+    margin-left: calc(100vw - var(--all-content-width));
+    margin-right: calc(100vw - var(--all-content-width));
 }
 
 #main-img {
@@ -64,42 +95,21 @@ img {
 }
 
 #main-title-a {
+    display: block;
     text-decoration: none;
-    top: -110px; 
-}
-
-#main-title {
-    margin-left: var(--title-left-padding);
-    font-size: 72px;
-    text-decoration: none;
-}
-
-#login-div {
-    margin-right: 0px;
-    margin-left: auto;
-    max-width: 100%;
+    position: relative;
+    top: -10px;
+    font-size: 24px;
     width: fit-content;
+    left: 10px;
 }
 
-#login-div div {
+#main-title-a h1 {
     width: fit-content;
-}
-
-#login-div p {
-    width: fit-content;
-}
-
-#login-div a {
-    width: fit-content;
-}
-
-#person-icon {
-    height: 15px;
 }
 
 #logout {
-    top: -30px;
-    left: 17px;
+    text-decoration: none;
 }
 
 #download-cv {
@@ -130,31 +140,62 @@ img {
 }
 
 /* Navigation */
-#main-nav {
+#mobile-main-nav {
+	margin-left: 0px;
+    position: relative;
+    left: 0px;
+	margin-top: calc(15px + var(--top-header-height));
 }
 
-#main-nav ul {
+#mobile-main-nav ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
 }
 
-#main-nav-main-div {
+#mobile-main-nav li {
+	padding-left: 0px;
+	margin-top: 1px;
+	height: var(--mobile-header-heights);
+    background-color: var(--secondary-color);
+	width: 100%;
+	display: table;
 }
 
-#main-nav li {
+#mobile-main-nav a {
+	text-decoration: none;
+	padding-left: 10px;
+	vertical-align: middle;
+	display: table-cell;
 }
 
-#main-nav a {
+.link {
+	display: inline;
+	vertical-align: middle;
 }
 
-#main-nav li:hover {
+/* triggers on a:hover but applies to .link */
+#mobile-main-nav a:hover .link {
+	background-color: var(--hover-color);
 }
 
-#main-nav li:hover h2 {
+#mobile-main-nav li:hover {
+    background-color: var(--pentiary-color);
 }
 
-#main-nav a h2 {
+#mobile-main-nav li:hover h2 {
+    color: var(--tertiary-color);
+}
+
+#mobile-main-nav a h2 {
+    color: var(--butiary-color)
 }
 
 /* Utility classes */
+.columns-all {
+    display: flex;
+}
+
 .relative {
     position: relative;
 }
@@ -198,9 +239,41 @@ img {
 
 /* Media Queries*/
 @media only screen and (min-width:600px) {
+    /* Variables */
+    :root {
+        --top-header-height: 230px;
+        --top-header-padding: 30px;
+        --all-content-width: 60vw;
+    }
     /* Structure */
+
+    #all-content {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: var(--all-content-width);
+    }
+
+    #main-header {
+        padding-bottom: 0px;
+        padding-left: calc((100vw - var(--all-content-width)) / 2.0);
+        padding-right: calc((100vw - var(--all-content-width)) / 2.0);
+        z-index: 3;
+        width: var(--all-content-width);
+        position: fixed;
+        height: var(--top-header-height);
+        top: 0px;
+        padding-top: var(--top-header-padding);
+        background-color: var(--tertiary-color);
+    }
+
     #main-content {
         margin-top: var(--top-header-height);
+    }
+
+    #remaining-content {
+        margin: 0px;
     }
 
     #main-img {
@@ -211,7 +284,8 @@ img {
 
     #main-title-a {
         text-decoration: none;
-        top: -110px; 
+        top: -41px; 
+        font-size: 72px;
     }
 
     #main-title {
@@ -220,61 +294,82 @@ img {
         text-decoration: none;
     }
 
-    #all-content {
-        width: var(--all-content-width);
-    } 
+    #login-div div {
+        width: fit-content;
+        left: 0px;
+    }
+
+    #login-div p {
+        width: fit-content;
+    }
+
+    #login-div a {
+        width: fit-content;
+    }
+
+    #logout p {
+        position: static;
+    }
+
+    #person-icon {
+        height: 15px;
+    }
+
+    #left-pane-about {
+        padding-top: 30px;
+    }
 
     /* Utility classes */
-	.columns {
-		display: flex;
-	}
+    .columns {
+        display: flex;
+    }
 
-	.flex-wrap {
-		flex-wrap: wrap;
-	}
-	
-	/* a class that centers column classes */
-	.center-columns {
-		justify-content: center;
-		align-items: center;
-	}
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    
+    /* a class that centers column classes */
+    .center-columns {
+        justify-content: center;
+        align-items: center;
+    }
 
-	.mobile {
-		display: none;
-	}
+    .mobile {
+        display: none;
+    }
 
-	.desktop {
-		/* basically (though not quite) the opposite of diplay: none */
-		display: unset;
-	}
+    .desktop {
+        /* basically (though not quite) the opposite of diplay: none */
+        display: unset;
+    }
 
-	.one {
-		flex: 1;
-	}
+    .one {
+        flex: 1;
+    }
 
-	.two {
-		flex: 2;
-	}
+    .two {
+        flex: 2;
+    }
 
-	.three {
-		flex: 3;
-	}
+    .three {
+        flex: 3;
+    }
 
-	.four {
-		flex: 4;
-	}
+    .four {
+        flex: 4;
+    }
 
-	.five {
-		flex: 5;
-	}
+    .five {
+        flex: 5;
+    }
 
-	.nine {
-		flex: 9;
-	}
+    .nine {
+        flex: 9;
+    }
 
     /* Navigation */
     #main-nav {
-        bottom: 153.4px;
+        bottom: 70.4px; 
         padding-left: 0px;
         padding-right: 0px;
         width: 100%;
@@ -295,8 +390,8 @@ img {
     #main-nav li {
         padding-left: 8px;
         padding-right: 8px;
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: auto;
+        margin-right: auto;
         display: inline-block;
     /* border-left: 1px solid var(--tertiary-color);
         border-right: 1px solid var(--tertiary-color); */

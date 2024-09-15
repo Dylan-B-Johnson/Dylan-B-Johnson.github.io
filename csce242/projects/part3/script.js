@@ -1,3 +1,5 @@
+let timer;
+
 const positionRelativeRec = (func, elementToPosition, otherElement, registerListener) => {
     const otherRect = otherElement.getBoundingClientRect();
     const width = elementToPosition.offsetWidth;
@@ -7,7 +9,9 @@ const positionRelativeRec = (func, elementToPosition, otherElement, registerList
     const rect = elementToPosition.getBoundingClientRect();
     const results = func(rect, otherRect, width, height, otherWidth, otherHeight);
     if (registerListener) {
-        window.addEventListener("resize", () => {positionRelativeRec(func, elementToPosition, otherElement, false);});
+        window.addEventListener("resize", () => {
+            timer = setInterval(positionRelativeRec(func, elementToPosition, otherElement, false), 100);
+        });
     }
     elementToPosition.style.position = "fixed";
     elementToPosition.style.margin = "0px";
@@ -15,6 +19,7 @@ const positionRelativeRec = (func, elementToPosition, otherElement, registerList
     elementToPosition.style.top = (results[0]).toString() + "px";
     elementToPosition.style.left = (results[1]).toString() + "px";
     elementToPosition.contentWindow.location.reload(true);
+    clearInterval(timer)
 }
 
 /** 
@@ -32,4 +37,5 @@ const positionMainTitle = (toPosRect, otherRect, toPosWidth, toPosHeight, otherW
     return [(otherHeight - toPosHeight) / 2.0 + otherRect.top, otherRect.right + 20];
 }
 
-//positionRelative(positionMainTitle, document.getElementById("main-title"), document.getElementById("main-img"));
+
+// positionRelative(positionMainTitle, document.getElementById("main-title"), document.getElementById("main-img"));
