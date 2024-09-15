@@ -190,7 +190,12 @@ img {
     padding: 5px;
 }
 
-#ad-button {
+.delete-button-edit-users {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#add-button {
     margin-left: 0px;
 }
 
@@ -244,6 +249,25 @@ img {
 #main-footer {
     text-align: center;
     width: 100%;
+}
+
+#edit-user-table-div {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#edit-user-table-div th {
+    padding-right: 50px;
+}
+
+#edit-user-table-div td {
+    padding-right: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* Navigation */
@@ -423,7 +447,7 @@ img {
     }
 
     #years {
-	display: inline-block;
+        display: inline-block;
     }
 
     #logout p {
@@ -436,6 +460,14 @@ img {
 
     #left-pane-about {
         padding-top: 30px;
+    }
+
+    .save-changes-users {
+        margin-top: 80px;
+    }
+
+    #add-button {
+        margin-left: auto;
     }
 
     /* Utility classes */
