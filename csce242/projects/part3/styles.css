@@ -182,6 +182,16 @@ img {
     /*color: var(--butiary-color); */
 }
 
+.placcard-glazes {
+    height: fit-content;
+}
+
+
+.placcard-glazes {
+    width: fit-content;
+    height: fit-content;
+}
+
 .remaining-content {
     padding-top: 0px;
 }
@@ -189,6 +199,18 @@ img {
 .placcard img {
     height: 210px;
     width: 200px;
+}
+
+.placcard-glazes img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placcard-glazes .one {
+    width: 200px;
+    margin-bottom: 5px;
 }
 
 #main-footer {
