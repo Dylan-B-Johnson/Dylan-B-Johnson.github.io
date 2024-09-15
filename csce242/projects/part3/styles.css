@@ -166,6 +166,34 @@ img {
     text-decoration: none;
 }
 
+.delete-button {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete-button a {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+}
+
+.delete-button h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    height: fit-content;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#ad-button {
+    margin-left: 0px;
+}
+
 .placcard {
     margin: 5px;
     border-radius: 5px;
