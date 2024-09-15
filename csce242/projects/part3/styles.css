@@ -7,13 +7,15 @@
     --tertiary-color: white;
     --butiary-color: #647077;
     --pentiary-color: #686868;
+    --really-light-grey: #F9F9F9;
     --septiary-color: #a4adb3;
     /* Other vals*/
     --title-left-padding: 20px;
     --top-header-height: 75px;
     --all-content-width: 98vw;
     --top-header-padding: 10px;
-	--mobile-header-heights: 52px;
+    --mobile-header-heights: 52px;
+    --main-content-margin-top-addition: 20px;
 }
 
 /* Main typography */
@@ -139,6 +141,61 @@ img {
     height: auto;
 }
 
+#years {
+    height: fit-content;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#years ul {
+    width: fit-content;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+#years li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#years a {
+    text-decoration: none;
+}
+
+.placcard {
+    margin: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--really-light-grey);
+}
+
+.placcard p {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: -9px;
+    text-align: center;
+    /*color: var(--butiary-color); */
+}
+
+.remaining-content {
+    padding-top: 0px;
+}
+
+.placcard img {
+    height: 210px;
+    width: 200px;
+}
+
+#main-footer {
+    text-align: center;
+    width: 100%;
+}
+
 /* Navigation */
 #mobile-main-nav {
 	margin-left: 0px;
@@ -192,12 +249,20 @@ img {
 }
 
 /* Utility classes */
+.wrap {
+    flex-wrap: wrap;
+}
+
 .columns-all {
     display: flex;
 }
 
 .relative {
     position: relative;
+}
+
+.contain {
+	object-fit: contain;
 }
 
 .contain-img {
@@ -241,7 +306,7 @@ img {
 @media only screen and (min-width:600px) {
     /* Variables */
     :root {
-        --top-header-height: 230px;
+        --top-header-height: 200px;
         --top-header-padding: 30px;
         --all-content-width: 60vw;
     }
@@ -262,14 +327,14 @@ img {
         z-index: 3;
         width: var(--all-content-width);
         position: fixed;
-        height: var(--top-header-height);
+        height: calc(var(--main-content-margin-top-addition) + var(--top-header-height));
         top: 0px;
         padding-top: var(--top-header-padding);
         background-color: var(--tertiary-color);
     }
 
     #main-content {
-        margin-top: var(--top-header-height);
+        margin-top: calc(30px + var(--main-content-margin-top-addition) + var(--top-header-height));
     }
 
     #remaining-content {
@@ -305,6 +370,10 @@ img {
 
     #login-div a {
         width: fit-content;
+    }
+
+    #years {
+	display: inline-block;
     }
 
     #logout p {
