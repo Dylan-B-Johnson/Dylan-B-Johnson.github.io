@@ -4,13 +4,9 @@ const slider = document.getElementById("slider");
 const sliderImg = document.getElementById("slider-img");
 
 const updateSliderImg = () => {
-    let marginLeft = (document.getElementById("slider-section").offsetWidth - sliderImg.offsetWidth) * slider.value / 100.0;
-    // for some reason it goes outside of the box by default, so this fixes that
+    const width = (document.getElementById("slider-section").offsetWidth - sliderImg.offsetWidth);
     // think is has something to do with the border because turning that off fixes it
-    if (marginLeft > 276.5) {
-        marginLeft = 279.5;
-    }
-    sliderImg.style.marginLeft = marginLeft + "px"; 
+    sliderImg.style.left = (width * slider.value / 100.0 - width / 2.0).toString() + "px";
 };
 
 slider.oninput = updateSliderImg; 

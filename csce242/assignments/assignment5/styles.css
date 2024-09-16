@@ -73,6 +73,7 @@ h3 {
 }
 
 #slider-img {
+	position: relative;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -117,6 +118,7 @@ p {
 
 /* Slider, following W3 Schools tutorial: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 #slider-container {
+	position: relative;
 	width: 100%;
 	display: flex;
 	justify-content: center;
