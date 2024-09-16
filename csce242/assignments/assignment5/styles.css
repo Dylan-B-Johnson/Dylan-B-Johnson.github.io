@@ -1,0 +1,171 @@
+/* Dylan Johnson Assignment 5 for CSCE 242 */
+
+:root {
+	/* Colors */
+	--left-column-color: #4b7051;
+	--background: #e8dad9;
+	--column-color: #c6a39f;
+	--colorless: #fff;
+	--last-color: #746d58;
+	--slider-color: #a7887d;
+}
+
+/* Structure */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1em;
+	line-height: 1.4;
+	font-family: Verdana, Arial, sans-sarif;
+	background-color: var(--background);
+}
+
+#main-footer p {
+	width: 100%;
+	text-align: center;
+}
+
+.img {
+	max-width: 100%;
+}
+
+.one {
+	background-color: var(--column-color);
+	width: 400px;
+	height: 500px;
+	margin-right: 100px;
+	margin-left: 100px;
+	margin-top: 40px;
+	border: solid 2px var(--left-column-color);
+	border-radius: 1px;
+}
+
+h1, h2, h3 {
+	width: fit-content;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h3 {
+	padding-top: 30px;
+}
+
+#img-button {
+	width: 300px;
+	height: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.desktop {
+	display: none;
+}
+
+#count {
+	background-color: var(--left-column-color);
+}
+
+#counter {
+	width: 100%;
+	text-align: center;
+}
+
+#slider-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	margin-top: 40px;
+	height: 200px;
+}
+
+#slider-section {
+	padding: 0px !important;
+}
+
+/* Typegraphy */
+h2 {
+	color: var(--last-color);
+}
+
+h3 {
+	font-size: 18px;
+	color: var(--left-column-color);
+}
+
+h1 {
+	color: var(--left-column-color);
+}
+
+#count h1 {
+	color: var(--colorless);
+}
+
+#count h3 {
+	color: var(--colorless);
+}
+
+#counter {
+	font-size: 128px;
+}
+
+p {
+	color: var(--left-column-color);
+}
+
+/* Slider, following W3 Schools tutorial: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+#slider-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.slider-class {
+	width: 90%;
+	padding: 0px;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 25px;
+	outline: none;
+	background-color: var(--slider-color);
+	/* Makes it more obvious it can be moved */
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+/* Makes it more obvious it can be moved */
+.slider-class:hover {
+	opacity: 1;
+}
+
+/* Slider knob on chrome */
+.slider-class::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: var(--last-color);
+}
+
+/* Slider knob on firefox */
+.slider-class::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: var(--last-color);
+}
+
+/* Apply to 600px and larger */
+@media only screen and (min-width:600px) {
+	.columns {
+		display: flex;
+	}
+
+	.one {
+		flex: 1;
+	}
+}
