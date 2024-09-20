@@ -1,0 +1,275 @@
+/* Dylan Johnson Assignment 6 for CSCE 242 */
+
+:root {
+	/* Colors */
+	--left-column-color: #4b7051;
+	--background: #e8dad9;
+	--column-color: #c6a39f;
+	--colorless: #fff;
+	--last-color: #746d58;
+	--slider-color: #a7887d;
+}
+
+/* Structure */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1em;
+	line-height: 1.4;
+	font-family: Verdana, Arial, sans-sarif;
+	background-color: var(--background);
+}
+
+#main-footer p {
+	width: 100%;
+	text-align: center;
+}
+
+.img {
+	max-width: 100%;
+}
+
+.one {
+	background-color: var(--column-color);
+	position: relative;
+	z-index: 3;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	border: solid 2px var(--left-column-color);
+	border-radius: 1px;
+}
+
+#exercises-mobile h3:hover {
+	cursor: pointer;
+}
+
+#random-img img {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+#exercises-desktop h3:hover {
+	cursor: pointer;
+}
+
+#exercises-desktop h3 {
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+#exercises-desktop div {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+h1, h2, h3 {
+	width: fit-content;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#img-button {
+	width: 300px;
+	height: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.desktop {
+	display: none;
+}
+
+#count {
+	background-color: var(--left-column-color);
+}
+
+#counter {
+	width: 100%;
+	text-align: center;
+}
+
+
+#slider-section {
+	padding: 0px !important;
+}
+
+/* Typegraphy */
+h2 {
+	color: var(--last-color);
+}
+
+h3 {
+	font-size: 18px;
+	color: var(--left-column-color);
+}
+
+h1 {
+	color: var(--left-column-color);
+}
+
+#count h1 {
+	color: var(--colorless);
+}
+
+#count h3 {
+	color: var(--colorless);
+}
+
+#counter {
+	font-size: 128px;
+}
+
+p {
+	color: var(--left-column-color);
+}
+
+#exercises-mobile .exercise {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: auto;
+	z-index: 3;
+	position: relative;
+}
+
+#exercises-mobile {
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+}
+	
+#arrow {
+	font-size: 32px;
+	margin-top: 0px;
+	margin-bottom: 0px !important;
+	position: relative;
+	top: 25px;
+	margin-left: 0px;
+	margin-right: auto;
+	z-index: 0;
+}
+
+/* Slider, following W3 Schools tutorial: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+#slider-container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.slider-class {
+	width: 90%;
+	padding: 0px;
+	-webkit-appearance: none;
+	appearance: none;
+	height: 25px;
+	outline: none;
+	background-color: var(--slider-color);
+	/* Makes it more obvious it can be moved */
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.hide {
+	display: none;
+}
+
+.columns-all {
+	display: flex;
+}
+
+.columns-all p {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#random-img h3 {
+	margin-bottom: 0px;
+}
+
+#pipe-after::after {
+	content: '|';
+}
+
+/* Makes it more obvious it can be moved */
+.slider-class:hover {
+	opacity: 1;
+}
+
+/* Slider knob on chrome */
+.slider-class::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: var(--last-color);
+}
+
+/* Slider knob on firefox */
+.slider-class::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: var(--last-color);
+} 
+
+span {
+	display: block;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+span div {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+span h3 {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-header h3 {
+	margin-bottom: 20px;
+}
+
+.center-columns {
+        justify-content: center;
+        align-items: center;
+}
+
+.desktop {
+	display: none;
+}
+
+/* Apply to 600px and larger */
+@media only screen and (min-width:600px) {
+	.columns {
+		display: flex;
+	}
+
+	.desktop-inline {
+		display: inline-block;
+	}
+
+	.desktop {
+		display: unset;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+}

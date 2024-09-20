@@ -1,0 +1,568 @@
+/* Dylan Johnson CSCE242 Project Part 3 */
+
+:root {
+	/* Colors */
+    --primary-color: black;
+    --secondary-color: #cacaca;
+    --tertiary-color: white;
+    --butiary-color: #647077;
+    --pentiary-color: #686868;
+    --really-light-grey: #F9F9F9;
+    --septiary-color: #a4adb3;
+    /* Other vals*/
+    --title-left-padding: 20px;
+    --top-header-height: 75px;
+    --all-content-width: 98vw;
+    --top-header-padding: 10px;
+    --mobile-header-heights: 52px;
+    --main-content-margin-top-addition: 20px;
+}
+
+/* Main typography */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    color: var(--primary-color);
+}
+
+/* Structure */
+body, html{
+    margin:0;
+    padding:0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#all-content {
+    width: var(--all-content-width);
+}
+
+#main-header {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    z-index: 3;
+    width: var(--all-content-width);
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    padding-top: var(--top-header-padding);
+    height: var(--top-header-height); 
+    background-color: var(--tertiary-color);
+}
+
+#header-child {
+    width: 100%;
+    height: 100%;
+}
+
+#login-div {
+    position: fixed;
+    width: fit-content;
+    top: var(--top-header-padding);
+    left: calc(100% - (100vw - var(--all-content-width)) / 2 - 50px);
+}
+
+#login-div-div {
+    left: -30px;
+}
+
+#logout {
+    top: -30px;
+    left: 17px;
+}
+
+#logout p {
+    position: relative;
+    left: -38px;
+}
+
+#main-content {
+    margin-top: 10px;   
+}
+
+#remaining-content {
+    margin-left: calc(100vw - var(--all-content-width));
+    margin-right: calc(100vw - var(--all-content-width));
+}
+
+#main-img {
+    max-width: 70px;
+    width: 70px;
+    height: 70px;
+}
+
+#main-title-a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    top: -10px;
+    font-size: 24px;
+    width: fit-content;
+    left: 10px;
+}
+
+#main-title-a h1 {
+    width: fit-content;
+}
+
+#logout {
+    text-decoration: none;
+}
+
+#download-cv {
+    background-color: var(--septiary-color);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+#download-cv a {
+    text-decoration: none;
+}
+
+#download-cv h3 {
+    padding: 5px;
+    color: var(--tertiary-color)
+}
+
+#artist-statement p {
+    margin-top: 70px;
+}
+
+#about-art {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: auto;
+}
+
+#years {
+    height: fit-content;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#years ul {
+    width: fit-content;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+#years li {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#years a {
+    text-decoration: none;
+}
+
+.delete-button {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete-button a {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+}
+
+.delete-button h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    height: fit-content;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.delete-button-edit-users {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#add-button {
+    margin-left: 0px;
+}
+
+.placcard {
+    margin: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--really-light-grey);
+}
+
+.placcard p {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: -9px;
+    text-align: center;
+    /*color: var(--butiary-color); */
+}
+
+.placcard-glazes {
+    height: fit-content;
+}
+
+
+.placcard-glazes {
+    width: fit-content;
+    height: fit-content;
+}
+
+.remaining-content {
+    padding-top: 0px;
+}
+
+.placcard img {
+    height: 210px;
+    width: 200px;
+}
+
+.placcard-glazes img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placcard-glazes .one {
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#main-footer {
+    text-align: center;
+    width: 100%;
+}
+
+#edit-user-table-div {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+#edit-user-table-div th {
+    padding-right: 50px;
+}
+
+#edit-user-table-div td {
+    padding-right: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Navigation */
+#mobile-main-nav {
+	margin-left: 0px;
+    position: relative;
+    left: 0px;
+	margin-top: calc(15px + var(--top-header-height));
+}
+
+#mobile-main-nav ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+#mobile-main-nav li {
+	padding-left: 0px;
+	margin-top: 1px;
+	height: var(--mobile-header-heights);
+    background-color: var(--secondary-color);
+	width: 100%;
+	display: table;
+}
+
+#mobile-main-nav a {
+	text-decoration: none;
+	padding-left: 10px;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.link {
+	display: inline;
+	vertical-align: middle;
+}
+
+/* triggers on a:hover but applies to .link */
+#mobile-main-nav a:hover .link {
+	background-color: var(--hover-color);
+}
+
+#mobile-main-nav li:hover {
+    background-color: var(--pentiary-color);
+}
+
+#mobile-main-nav li:hover h2 {
+    color: var(--tertiary-color);
+}
+
+#mobile-main-nav a h2 {
+    color: var(--butiary-color)
+}
+
+/* Utility classes */
+.wrap {
+    flex-wrap: wrap;
+}
+
+.columns-all {
+    display: flex;
+}
+
+.relative {
+    position: relative;
+}
+
+.contain {
+	object-fit: contain;
+}
+
+.contain-img {
+	object-fit: contain;
+}
+
+.right {
+    float: right;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.fill-width {
+    width: 100%;
+}
+
+.desktop {
+    display: none;
+}
+
+.center-columns-horizontal {
+    justify-content: center;
+}
+
+.center-columns {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries*/
+@media only screen and (min-width:600px) {
+    /* Variables */
+    :root {
+        --top-header-height: 200px;
+        --top-header-padding: 30px;
+        --all-content-width: 60vw;
+    }
+    /* Structure */
+
+    #all-content {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: var(--all-content-width);
+    }
+
+    #main-header {
+        padding-bottom: 0px;
+        padding-left: calc((100vw - var(--all-content-width)) / 2.0);
+        padding-right: calc((100vw - var(--all-content-width)) / 2.0);
+        z-index: 3;
+        width: var(--all-content-width);
+        position: fixed;
+        height: calc(var(--main-content-margin-top-addition) + var(--top-header-height));
+        top: 0px;
+        padding-top: var(--top-header-padding);
+        background-color: var(--tertiary-color);
+    }
+
+    #main-content {
+        margin-top: calc(30px + var(--main-content-margin-top-addition) + var(--top-header-height));
+    }
+
+    #remaining-content {
+        margin: 0px;
+    }
+
+    #main-img {
+        max-width: 200px;
+        width: 200px;
+        height: 200px;
+    }
+
+    #main-title-a {
+        text-decoration: none;
+        top: -41px; 
+        font-size: 72px;
+    }
+
+    #main-title {
+        margin-left: var(--title-left-padding);
+        font-size: 72px;
+        text-decoration: none;
+    }
+
+    #login-div div {
+        width: fit-content;
+        left: 0px;
+    }
+
+    #login-div p {
+        width: fit-content;
+    }
+
+    #login-div a {
+        width: fit-content;
+    }
+
+    #years {
+        display: inline-block;
+    }
+
+    #logout p {
+        position: static;
+    }
+
+    #person-icon {
+        height: 15px;
+    }
+
+    #left-pane-about {
+        padding-top: 30px;
+    }
+
+    .save-changes-users {
+        margin-top: 80px;
+    }
+
+    #add-button {
+        margin-left: auto;
+    }
+
+    /* Utility classes */
+    .columns {
+        display: flex;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+    
+    /* a class that centers column classes */
+    .center-columns {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        /* basically (though not quite) the opposite of diplay: none */
+        display: unset;
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    .two {
+        flex: 2;
+    }
+
+    .three {
+        flex: 3;
+    }
+
+    .four {
+        flex: 4;
+    }
+
+    .five {
+        flex: 5;
+    }
+
+    .nine {
+        flex: 9;
+    }
+
+    /* Navigation */
+    #main-nav {
+        bottom: 70.4px; 
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+
+    #main-nav ul {
+        margin-left: var(--title-left-padding);
+        list-style-type: none;
+        width: 100%;
+        padding: 0px;
+    }
+
+    #main-nav-main-div {
+        background-color: var(--secondary-color);
+        width: 100%;
+    }
+
+    #main-nav li {
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+    /* border-left: 1px solid var(--tertiary-color);
+        border-right: 1px solid var(--tertiary-color); */
+    }
+
+    #main-nav a {
+        text-decoration: none;
+        display: inline-block;
+        height: 100%;
+    }
+
+    #main-nav li:hover {
+        background-color: var(--pentiary-color);
+    }
+
+    #main-nav li:hover h2 {
+        color: var(--tertiary-color);
+    }
+
+    #main-nav a h2 {
+        color: var(--butiary-color)
+    }
+}
