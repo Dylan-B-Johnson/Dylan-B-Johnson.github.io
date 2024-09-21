@@ -202,15 +202,14 @@ img {
 .placcard {
     margin: 5px;
     border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     background-color: var(--really-light-grey);
 }
 
 .placcard p {
     width: 100%;
     margin-top: 5px;
-    margin-bottom: -9px;
+    margin-bottom: -5px;
     text-align: center;
     /*color: var(--butiary-color); */
 }
@@ -231,7 +230,6 @@ img {
 
 .placcard img {
     height: 210px;
-    width: 200px;
 }
 
 .placcard-glazes img {
@@ -323,6 +321,10 @@ img {
 }
 
 /* Utility classes */
+.hide {
+    display: none;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -447,7 +449,8 @@ img {
     }
 
     #years {
-        display: inline-block;
+        /*display: inline-block;*/
+	display: none;
     }
 
     #logout p {
