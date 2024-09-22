@@ -1,16 +1,19 @@
 /* Dylan Johnson CSCE242 Project Part 3 */
-
+/* https://maketintsandshades.com/#287561,6E3A1A,4D4400,5F5F31,687871 color pallet */
 :root {
 	/* Colors */
-    --primary-color: black;
-    --secondary-color: #cacaca;
-    --tertiary-color: white;
-    --butiary-color: #647077;
+    --main-title: #4d2912;
+    --primary-color: #6e3a1a;
+    --secondary-color: #287561;
+    --tertiary-color: var(--secondary-color);
+    --butiary-color: white;
     --pentiary-color: #686868;
-    --really-light-grey: #F9F9F9;
-    --septiary-color: #a4adb3;
-    --hamburger-color: var(--tertiary-color);
-    --ham-back-color: var(--pentiary-color);
+    --really-light-grey: #dfdfd6;
+    --septiary-color: #6e3a1a;
+    --ham-back-color: var(--secondary-color);
+    --most-text: var(--main-title);
+    --background: white;
+    --hamburger-color: var(--background);
     /* Other vals*/
     --title-left-padding: 20px;
     --top-header-height: 75px;
@@ -23,10 +26,15 @@
 /* Main typography */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
 }
 
 * {
-    color: var(--primary-color);
+    color: var(--most-text);
+}
+
+#main-title {
+    color: var(--main-title);
 }
 
 /* Structure */
@@ -54,7 +62,7 @@ img {
     top: 0px;
     padding-top: var(--top-header-padding);
     height: var(--top-header-height); 
-    background-color: var(--tertiary-color);
+    background-color: var(--background);
 }
 
 #header-child {
@@ -120,6 +128,15 @@ img {
     left: -38px;
 }
 
+#person-icon {
+    top: -1px;
+    left: -2px;
+}
+
+#logout-mobile {
+    text-decoration: none;
+}
+
 #main-content {
     margin-top: 10px;   
 }
@@ -173,7 +190,7 @@ img {
 }
 
 .dropdown .edit-div:hover {
-    background-color: var(--pentiary-color);
+    background-color: var(--primary-color);
 }
     
 .dropdown a {
@@ -202,7 +219,7 @@ img {
 
 #download-cv h3 {
     padding: 5px;
-    color: var(--tertiary-color)
+    color: var(--background);
 }
 
 #artist-statement p {
@@ -259,7 +276,7 @@ img {
     margin-bottom: 10px;
     display: block;
     height: fit-content;
-    color: var(--tertiary-color);
+    color: var(--background);
     background-color: var(--secondary-color);
     border-radius: 5px;
     padding: 5px;
@@ -358,7 +375,7 @@ img {
 	padding-left: 0px;
 	margin-top: 1px;
 	height: var(--mobile-header-heights);
-    background-color: var(--secondary-color);
+	background-color: var(--secondary-color);
 	width: 100%;
 	display: table;
 }
@@ -381,11 +398,11 @@ img {
 }
 
 #mobile-main-nav li:hover {
-    background-color: var(--pentiary-color);
+    background-color: var(--primary-color);
 }
 
 #mobile-main-nav li:hover h2 {
-    color: var(--tertiary-color);
+    color: var(--background);
 }
 
 #mobile-main-nav a h2 {
@@ -484,7 +501,7 @@ img {
         height: calc(var(--main-content-margin-top-addition) + var(--top-header-height));
         top: 0px;
         padding-top: var(--top-header-padding);
-        background-color: var(--tertiary-color);
+        background-color: var(--background);
     }
 
     #main-content {
@@ -636,15 +653,15 @@ img {
     }
 
     #main-nav li:hover {
-        background-color: var(--pentiary-color);
+        background-color: var(--primary-color);
     }
 
     #main-nav li:hover h2 {
-        color: var(--tertiary-color);
+        color: var(--butiary-color);
     }
 
     #main-nav a h2 {
-        color: var(--butiary-color)
+        color: var(--butiary-color);
     }
 
     #main-title {
