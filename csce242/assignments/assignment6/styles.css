@@ -193,7 +193,7 @@ p {
 	margin-bottom: 0px;
 }
 
-#pipe-after::after {
+#exercises-desktop :not(:last-child):after {
 	content: '|';
 }
 
