@@ -4,7 +4,7 @@
 	/* Colors */
     --main-title: #4d2912;
     --primary-color: #6e3a1a;
-    --secondary-color: #287561;
+    --secondary-color: rgb(61, 150, 164); /*#287561;*/
     --tertiary-color: var(--secondary-color);
     --butiary-color: white;
     --pentiary-color: #686868;
@@ -14,6 +14,7 @@
     --most-text: var(--main-title);
     --background: white;
     --hamburger-color: var(--background);
+    --light-primary-color: #c5b0a3;
     /* Other vals*/
     --title-left-padding: 20px;
     --top-header-height: 75px;
@@ -21,6 +22,8 @@
     --top-header-padding: 10px;
     --mobile-header-heights: 52px;
     --main-content-margin-top-addition: 20px;
+    --nav-border-radius: 2px;
+    --main-img-border-radius: 2px;
 }
 
 /* Main typography */
@@ -35,6 +38,7 @@ body {
 
 #main-title {
     color: var(--main-title);
+    font-family: 'Arial Black', 'Arial Bold', Arial, sans-serif;
 }
 
 /* Structure */
@@ -147,7 +151,12 @@ img {
     margin-top: 85px;
 }
 
+#remaining-content-child {
+    justify-content: space-around !important;
+}
+
 #main-img {
+    border-radius: var(--main-img-border-radius);
     max-width: 70px;
     width: 70px;
     height: 70px;
@@ -174,6 +183,8 @@ img {
 #edit-dropdown {
     display: none;
     position: absolute;
+    border-bottom-left-radius: var(--nav-border-radius);
+    border-bottom-right-radius: var(--nav-border-radius);
 }
 
 #edit {
@@ -300,8 +311,8 @@ img {
 
 .placcard p {
     width: 100%;
-    margin-top: 5px;
-    margin-bottom: -5px;
+    margin-top: -5px;
+    margin-bottom: 5px;
     text-align: center;
     /*color: var(--butiary-color); */
 }
@@ -319,6 +330,10 @@ img {
     height: 210px;
 }
 
+.placcard p {
+    font-weight: bold;
+}
+
 .placcard-glazes img {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -326,9 +341,21 @@ img {
     margin-right: auto;
 }
 
+.placcard-glazes table th {
+    text-align: left;
+}
+
 .placcard-glazes .one {
     width: 200px;
     margin-bottom: 5px;
+}
+
+.placcard-glazes p {
+    font-weight: bold;
+}
+
+.placcard-glazes .one a {
+    color: var(--light-primary-color);
 }
 
 #main-footer {
@@ -336,6 +363,9 @@ img {
     width: 100%;
 }
 
+#main-footer p {
+    color: var(--light-primary-color);
+}
 #edit-user-table-div {
     width: fit-content;
     margin-left: auto;
@@ -468,13 +498,13 @@ img {
 }
 
 /* Media Queries*/
-@media only screen and (min-width:390px) {
+@media only screen and (min-width:405px) {
    #main-title-a {
 	display: unset;
     }
 }
 
-@media only screen and (min-width:650px) {
+@media only screen and (min-width:687px) {
     /* Variables */
     :root {
         --top-header-height: 200px;
@@ -633,7 +663,10 @@ img {
 
     #main-nav-main-div {
         background-color: var(--secondary-color);
+	border-radius: var(--nav-border-radius);
         width: 100%;
+	position: relative; /* makes bar smaller */
+	top: 19.83px; /* makes bar smaller */
     }
 
     #main-nav li {
@@ -662,6 +695,8 @@ img {
 
     #main-nav a h2 {
         color: var(--butiary-color);
+	margin-top: 10px;/* makes bar smaller */
+	margin-bottom: 10px;/* makes bar smaller */
     }
 
     #main-title {
@@ -690,6 +725,7 @@ img {
     }
 }
 
+/*
 @media only screen and (min-width:670px) {
     #main-nav-main-div {
 	width: 442px;
@@ -700,9 +736,9 @@ img {
 	width: 617px;
     }
 
-}
+}*/
 
-@media only screen and (min-width:770px) {
+@media only screen and (min-width:828px) {
     #main-nav-main-div {
 	width: 500px;
     }
@@ -738,7 +774,7 @@ img {
     }
 }
 
-@media only screen and (min-width:975px) {
+@media only screen and (min-width:1032px) {
     #remaining-content {
 	margin-left: 0px;
 	width: auto;
@@ -755,7 +791,7 @@ img {
     }
 }
 
-@media only screen and (min-width:1265px) {
+@media only screen and (min-width:1277px) {
     #main-title {
 	height: 82.4px;
 	font-size: 72px;
