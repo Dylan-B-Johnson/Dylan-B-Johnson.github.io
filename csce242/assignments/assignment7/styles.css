@@ -1,0 +1,148 @@
+/* Dylan Johnson Assignment 7 for CSCE 242 */
+
+:root {
+	/* Colors */
+	--left-column-color: #4b7051;
+	--background: #e8dad9;
+	--column-color: #c6a39f;
+	--colorless: #fff;
+	--last-color: #746d58;
+	--slider-color: #a7887d;
+	--black: black;
+	--white: white;
+	--star-color: yellow;
+}
+
+/* Structure */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1em;
+	line-height: 1.4;
+	font-family: Verdana, Arial, sans-sarif;
+	background-color: var(--background);
+}
+
+#main-footer p {
+	width: 100%;
+	text-align: center;
+}
+
+.one {
+	background-color: var(--column-color);
+	position: relative;
+	z-index: 3;
+	width: 620px;
+	margin-right: auto;
+	margin-left: auto;
+	border: solid 2px var(--left-column-color);
+	border-radius: 1px;
+}
+
+h1, h2, h3 {
+	width: fit-content;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.desktop {
+	display: none;
+}
+
+#slider-section {
+	padding-top: 5px;
+}
+
+
+/* Learned about from: https://www.w3schools.com/howto/howto_css_star_rating.asp */
+.fa-star {
+	color: var(--star-color);
+	position: absolute;
+}
+
+label {
+	margin-left: 10px;
+}
+
+#sky {
+	margin-left: auto;
+	position: relative;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 600px;
+	height: 600px;
+	background-color: var(--black);
+	border: solid 1px var(--white);
+	border-radius: 1px;
+}
+
+/* Typegraphy */
+h2 {
+	color: var(--last-color);
+}
+
+h3 {
+	font-size: 18px;
+	color: var(--left-column-color);
+}
+
+h1 {
+	color: var(--left-column-color);
+}
+
+#count h1 {
+	color: var(--colorless);
+}
+
+#count h3 {
+	color: var(--colorless);
+}
+
+
+.hide {
+	display: none;
+}
+
+.columns-all {
+	display: flex;
+}
+
+.columns-all p {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#main-header h3 {
+	margin-bottom: 20px;
+}
+
+.center-columns {
+        justify-content: center;
+        align-items: center;
+}
+
+.desktop {
+	display: none;
+}
+
+/* Apply to 600px and larger */
+@media only screen and (min-width:600px) {
+	.columns {
+		display: flex;
+	}
+
+	.desktop-inline {
+		display: inline-block;
+	}
+
+	.desktop {
+		display: unset;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+}
