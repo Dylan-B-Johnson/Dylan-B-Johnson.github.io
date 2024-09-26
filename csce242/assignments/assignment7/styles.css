@@ -39,6 +39,14 @@ body {
 	border-radius: 1px;
 }
 
+#stars-label {
+	color: var(--white);
+}
+
+#num-stars {
+	color: var(--column-color);
+}
+
 h1, h2, h3 {
 	width: fit-content;
 	display: block;
@@ -62,6 +70,7 @@ h1, h2, h3 {
 	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
+	color: var(--white);
 }
 
 /* Learned about from: https://www.w3schools.com/howto/howto_css_star_rating.asp */
