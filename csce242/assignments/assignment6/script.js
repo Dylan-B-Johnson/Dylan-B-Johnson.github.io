@@ -44,11 +44,11 @@ const arrowWork = (e) => {
     if (e.target.innerText == String.fromCodePoint(129169)) {
         // down arrow
         e.target.style.setProperty("top", "25px");
-        e.target.innerHTML = "&#129171";
+        e.target.innerHTML = "&#129171;";
     } else {
         // up arrow
         e.target.style.setProperty("top", "0px");
-        e.target.innerHTML = "&#129169";
+        e.target.innerHTML = "&#129169;";
     }
     document.getElementById("exe1").classList.toggle("hide");
     document.getElementById("exe2").classList.toggle("hide");
