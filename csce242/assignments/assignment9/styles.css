@@ -1,0 +1,213 @@
+/* Dylan Johnson Assignment 8 for CSCE 242 */
+:root {
+	/* Colors */
+	--left-column-color: #4b7051;
+	--background: #e8dad9;
+	--column-color: #c6a39f;
+	--colorless: #fff;
+	--last-color: #746d58;
+	--slider-color: #a7887d;
+	--black: black;
+	--white: white;
+	--red: red;
+	--star-color: yellow;
+}
+
+/* Structure */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1em;
+	line-height: 1.4;
+	font-family: Verdana, Arial, sans-sarif;
+	background-color: var(--background);
+}
+
+img {
+	max-width: calc(100% - 20px);
+	max-height: 100%;
+	width: 200px;
+	height: 300px;
+	border: solid 2px var(--left-column-color);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+a {
+	text-decoration: none;
+	margin: 10px;
+}
+
+
+#main-footer p {
+	width: 100%;
+	text-align: center;
+	color: var(--left-column-color);
+}
+
+.one {
+	background-color: var(--column-color);
+	margin: 10px;
+	max-width:100%;
+	position: relative;
+	width: fit-content;
+	border: solid 2px var(--left-column-color);
+	border-radius: 1px;
+}
+
+#main-modal .one {
+	margin: 0px !important;
+}
+
+#main-modal h2 {
+	width: 100%;
+	position: relative;
+	left: -18px;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	text-align: left;
+}
+
+#main-modal p {
+	margin-left: 10px;
+}
+
+#main-modal {
+	padding-left: 20px;
+	padding-right: 20px;
+	display: none;
+	position: fixed;
+	width: 100vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#modal-child {
+	width: fit-content !important;
+}
+
+#main-section div {
+	border: solid 1px var(--left-column-color);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#top p, #top h3 {
+	margin: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+#bottom, #bottom a {
+	color: var(--left-column-color);
+}
+
+#bottom {
+	padding-left: 10px;
+}
+
+h1, h2, h3 {
+	width: fit-content;
+	display: block;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+#main-content {
+	width: clamp(0px, 80%, 90%);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#main-modal a {
+	width: 100%;
+	text-align: center;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#close:hover {
+	cursor: pointer;
+}
+
+.desktop {
+	display: none;
+}
+
+/* Typegraphy */
+h2 {
+	color: var(--last-color);
+}
+
+h3 {
+	font-size: 18px;
+	color: var(--left-column-color);
+}
+
+h1, p, a {
+	color: var(--left-column-color) !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.columns-all {
+	display: flex;
+}
+
+.columns-all p {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.new-row-wrap {
+	width: 100%;
+	border: none !important;
+}
+
+.center-columns-btw {
+        justify-content: space-between;
+        align-items: center;
+}
+
+.desktop {
+	display: none;
+}
+
+/* Apply to 600px and larger */
+@media only screen and (min-width:600px) {
+	#main-modal img {
+		margin-right: 10px !important;
+	}	
+
+	.columns {
+		display: flex;
+	}
+
+	.wrap {
+		flex-wrap: wrap;
+	}
+
+	.desktop-inline {
+		display: inline-block;
+	}
+
+	.desktop {
+		display: unset;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	#main-modal a {
+		width: 100%;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+}
