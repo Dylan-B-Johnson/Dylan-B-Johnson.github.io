@@ -1,5 +1,6 @@
 const modal = document.getElementById("main-modal");
 const modalChild = document.getElementById("modal-child");
+const cone = ["10", "9", "04", "19", "07", "7", "09", "09", "8", "10", "10", "10", "9", "09", "07", "08", "10", "10", "11", "9", "08", "4", "5"];
 
 const basename = (aString) => {
    return aString.split('/').reverse()[0];
@@ -10,6 +11,9 @@ const expandSection = (placcard) => {
         const top = document.createElement("div");
         const bottom = document.createElement("div");
         const close = document.createElement("p");
+        const info = document.createElement("p");
+        info.classList.add("gallery-info");
+        info.innerHTML = "Slip cast with Cone " + cone[Array.prototype.indexOf.call(placcard.parentNode.children, placcard)];
         close.innerHTML = "&times;";
         close.style.zIndex = 400;
         close.style.fontSize = "37px";
@@ -34,15 +38,16 @@ const expandSection = (placcard) => {
         sect.append(top);
         sect.append(bottom);
         const img = document.createElement("img");
-        img.setAttribute("src", "./images/work/high-res/" + basename(placcard.lastElementChild.src));
+        img.setAttribute("src", "./images/work/high-res/" + basename(placcard.children[1].src));
         img.onerror = () => {
-                img.setAttribute("src", "./images/work/high-res/" + basename(placcard.lastElementChild.src).slice(0,-3) + "png");
+                img.setAttribute("src", "./images/work/high-res/" + basename(placcard.children[1].src).slice(0,-3) + "png");
         }
         img.style.height = "auto";
         img.style.width = "auto";
         img.classList.add("contain");
         img.style.maxHeight = "800px";
         bottom.append(img);
+        bottom.append(info);
         return sect;
 };
 
@@ -56,6 +61,12 @@ for (let i of parent.children) {
                         modal.style.display = "block";
                         modalChild.style.display = "block";
                 }
-        }
+        };
+        i.classList.add("desktop-pointer");
+        const info = document.createElement("p");
+        info.classList.add("gallery-info-mobile");
+        info.classList.add("gallery-placcard");
+        info.innerHTML = "Slip cast with Cone " + cone[Array.prototype.indexOf.call(i.parentNode.children, i)];
+        i.append(info);
 }
 

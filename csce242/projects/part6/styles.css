@@ -382,13 +382,20 @@ img {
     text-align: left;
 }
 
-
 .placcard-glazes p {
     font-weight: bold;
 }
 
 .placcard-glazes .one a {
     color: var(--light-primary-color);
+}
+
+.gallery-info {
+    margin-top: 5px !important;
+}
+
+.gallery-info-mobile {
+    margin-top: 5px !important;
 }
 
 #main-footer {
@@ -621,6 +628,9 @@ img {
         --all-content-width: 80vw;
     }
     /* Structure */
+    .gallery-info-mobile {
+	display: none;
+    }
 
     #all-content {
         margin-left: auto;
@@ -667,6 +677,14 @@ img {
         margin-left: var(--title-left-padding);
         font-size: 72px;
         text-decoration: none;
+    }
+
+    .gallery-placcard {
+	z-index: 101;
+    }
+
+    .desktop-pointer:hover {
+	cursor: pointer;
     }
 
     #login-div div {
