@@ -10,7 +10,7 @@ const getIceCreams = async() => {
 
 const getIceCreamSection = (iceCream) => {
 	const container = document.createElement("div");
-	container.classList.add("one");
+	//container.classList.add("one");
 	container.classList.add("container");
 	container.style.position = "relative";
 	const img = document.createElement("img");
@@ -30,16 +30,8 @@ const getIceCreamSection = (iceCream) => {
 const showIceCreams = async() => {
 	const iceCreams = await getIceCreams();
 	const content = document.getElementById("main-content");
-	let i = 1;
-	let row;
 	iceCreams.forEach((iceCream) => {
 		content.append(getIceCreamSection(iceCream));
-		if (i % 4 == 0) {
-			const row = document.createElement("div");
-			row.style.width = "100%";
-			content.append(row);
-		}
-		i++;
 	});
 	
 };
