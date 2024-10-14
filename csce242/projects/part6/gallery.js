@@ -1,9 +1,18 @@
 const modal = document.getElementById("main-modal");
 const modalChild = document.getElementById("modal-child");
 const cone = ["10", "9", "04", "19", "07", "7", "09", "09", "8", "10", "10", "10", "9", "09", "07", "08", "10", "10", "11", "9", "08", "4", "5"];
+const sitsOnPedestal = [0, 5, 7, 8, 9];
 
 const basename = (aString) => {
    return aString.split('/').reverse()[0];
+};
+
+const hangs = (indexArg) => {
+        if (sitsOnPedestal.includes(indexArg)) {
+                return ". Sits on pedestal.";
+        } else {
+                return ". Hangs on wall.";
+        }
 };
 
 const expandSection = (placcard) => {
@@ -13,7 +22,8 @@ const expandSection = (placcard) => {
         const close = document.createElement("p");
         const info = document.createElement("p");
         info.classList.add("gallery-info");
-        info.innerHTML = "Slip cast with Cone " + cone[Array.prototype.indexOf.call(placcard.parentNode.children, placcard)];
+        const index = Array.prototype.indexOf.call(placcard.parentNode.children, placcard);
+        info.innerHTML = "Slip cast with Cone " + cone[index] + hangs(index);
         close.innerHTML = "&times;";
         close.style.zIndex = 400;
         close.style.fontSize = "37px";
@@ -66,7 +76,8 @@ for (let i of parent.children) {
         const info = document.createElement("p");
         info.classList.add("gallery-info-mobile");
         info.classList.add("gallery-placcard");
-        info.innerHTML = "Slip cast with Cone " + cone[Array.prototype.indexOf.call(i.parentNode.children, i)];
+        const localIndex = Array.prototype.indexOf.call(i.parentNode.children, i);
+        info.innerHTML = "Slip cast with Cone " + cone[localIndex] + hangs(localIndex);
         i.append(info);
 }
 
