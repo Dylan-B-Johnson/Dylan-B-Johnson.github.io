@@ -18,6 +18,14 @@ body {
 	padding-top: 20px;
 }
 
+#render, #code {
+	text-decoration: underline !important;
+}
+
+a {
+	color: #365c55 !important; 
+}
+
 #main-header h1 {
 	text-align: center;
 }
