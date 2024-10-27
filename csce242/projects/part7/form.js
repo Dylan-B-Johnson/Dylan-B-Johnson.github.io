@@ -1,3 +1,5 @@
+const result = document.getElementById("form-result");
+
 const sendEmail = async(json) => {
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
