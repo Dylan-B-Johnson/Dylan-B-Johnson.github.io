@@ -18,7 +18,7 @@ body {
 	padding-top: 20px;
 }
 
-#render, #code {
+.render, .code {
 	text-decoration: underline !important;
 }
 

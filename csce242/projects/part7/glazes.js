@@ -95,9 +95,7 @@ const updateGlazeHeight = () => {
     let maxHeight = 0;
     const space = document.getElementById("remaining-content-child");
     const children = space.children;
-    for (let i = 0; i < children.length; i++) {
-        document.querySelector(':root').style.setProperty("--glaze-height", "fit-content");
-    }
+    document.querySelector(':root').style.setProperty("--glaze-height", "fit-content");
     for (let i = 0; i < children.length; i++) {
         if (children[i].offsetHeight > maxHeight)
             maxHeight = children[i].offsetHeight;
